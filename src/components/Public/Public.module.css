@@ -1,8 +1,9 @@
 .public {
-    width: 90%;
-    max-width: 40rem;
+    width: 100%;
+    max-width: 100rem;
     padding: 3rem;
     margin: 6rem auto;
-    text-align: center;
+    text-align: left;
+    text-decoration-color: midnightblue;
   }
   

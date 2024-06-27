@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 const BASE_URL = "https://react-http-b8415-default-rtdb.firebaseio.com/";
-
 const AuthContext = React.createContext({
   isLoggedIn: false,
   onLogout: () => {},
@@ -21,10 +20,10 @@ export function AuthContextProvider(props) {
   const fetchUser = async (email) => {
     const url = `${BASE_URL}users.json?orderBy="email"&equalTo="${email}"`;
     const response = await fetch(url);
-
+//esta linea falla
     if (!response.ok) throw new Error("Algo salió mal");
 
-    return response.json();
+    return await response.json();
   };
 
   const loginHandler = async (email, callback) => {

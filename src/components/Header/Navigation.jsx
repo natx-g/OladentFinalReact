@@ -11,13 +11,13 @@ const Navigation = () => {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link to="/">Public</Link>
+          <Link to="/">Bienvenido</Link>
         </li>
         <li>
-          <Link to="/gallery">Galería</Link>
+          <Link to="/gallery">Publicidad</Link>
         </li>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/home">Clasificaciones</Link>
         </li>
         <li>
           {isLoggedIn ? (
@@ -28,7 +28,7 @@ const Navigation = () => {
               Logout
             </Button>
           ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/login">Acceso</Link>
           )}
         </li>
       </ul>

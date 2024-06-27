@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import Card from "../UI/Card/Card";
 import styles from "./Home.module.css";
 import useHttp from "../../hooks/usehttp";
+import React from 'react';
+
 const BASE_URL = "https://react-http-b8415-default-rtdb.firebaseio.com/";
+
 const Home = () => {
   const [user, setUser] = useState({
-    first_Name: "",
-    last_Name: "",
+    firstName: "",
+    lastName: "",
     email: "",
   });
 
@@ -20,8 +23,8 @@ const Home = () => {
       const data = await request({ url });
       console.log(url);
       setUser({
-        first_Name: data[userId].first_name,
-        last_Name: data[userId].last_name,
+        firstName: data[userId].first_name,
+        lastName: data[userId].last_name,
         email: data[userId].email,
       });
     };
@@ -41,7 +44,7 @@ const Home = () => {
         <>
           <h1>¡Bienvenido!</h1>
           <h2>
-            {user.first_Name} {user.last_Name}
+            {user.firstName} {user.lastName}
           </h2>
         </>
       )}

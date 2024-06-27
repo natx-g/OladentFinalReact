@@ -6,6 +6,7 @@ import Public from "./components/Public/Public"
 import Header from "./components/Header/Header";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 import Gallery from "./components/Gallery/fotos"
+
 const App = () => {
   return (
     <React.Fragment>
@@ -15,6 +16,7 @@ const App = () => {
           <Route
             path="/"
             element={<Public />}
+            
           />
           <Route
             path="/home"
